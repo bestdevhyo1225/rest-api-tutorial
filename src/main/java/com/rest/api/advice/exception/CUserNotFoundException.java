@@ -1,15 +1,15 @@
 package com.rest.api.advice.exception;
 
-public class CUesrNotFoundException extends RuntimeException {
-    public CUesrNotFoundException(String message, Throwable t) {
+public class CUserNotFoundException extends RuntimeException {
+    public CUserNotFoundException(String message, Throwable t) {
         super(message, t);
     }
 
-    public CUesrNotFoundException(String message) {
+    public CUserNotFoundException(String message) {
         super(message);
     }
 
-    public CUesrNotFoundException() {
+    public CUserNotFoundException() {
         super();
     }
 }
