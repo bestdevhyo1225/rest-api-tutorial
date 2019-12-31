@@ -11,8 +11,7 @@ import java.util.List;
 public class ResponseService {
     // enum으로 API 요청 결과에 대한 code, message를 정의한다.
     public enum CommonResponse {
-        SUCCESS(0, "성공했습니다."),
-        FAIL(-1, "실패했습니다.");
+        SUCCESS(0, "성공했습니다.");
 
         private int code;
         private String message;
@@ -46,11 +45,11 @@ public class ResponseService {
     }
 
     // 실패 결과만 처리하는 메소드
-    public CommonResult getFailResult() {
+    public CommonResult getFailResult(int code, String message) {
         CommonResult result = new CommonResult();
         result.setSuccess(false);
-        result.setCode(CommonResponse.FAIL.getCode());
-        result.setMessage(CommonResponse.FAIL.getMessage());
+        result.setCode(code);
+        result.setMessage(message);
         return result;
     }
 
